@@ -104,7 +104,7 @@ def clean_index(dirname):
 
 
 def add_doc(writer, path):
-    temp_url = 'http://www.google.co.in/'
+    temp_url = 'http://www.blahblah.co.in/'
     print 'Opening ', path
     try:
         f_link = open(path, 'rb')
