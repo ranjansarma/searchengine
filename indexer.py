@@ -1,5 +1,3 @@
-__author__ = 'ranjan'
-
 from whoosh.index import create_in
 from whoosh.index import open_dir
 from whoosh.index import exists_in
@@ -7,10 +5,10 @@ from whoosh.analysis import StemmingAnalyzer
 from whoosh.fields import *
 import os
 import pickle
-import datetime
 import sys
 
 index_dir = 'stories_index'
+extracted_dir = "extracted_docs/"
 
 
 def main():
@@ -40,27 +38,37 @@ def main():
 
 
 def create_schema():
-    '''
+    """
     Function to create schema for the index to be created
-    '''
+    """
     schema = Schema(path=ID(stored=True), content=TEXT(stored=True, analyzer=StemmingAnalyzer()),
-                    link=TEXT(stored=True), date=TEXT(stored=True))
+                    link=TEXT(stored=True), title=TEXT(stored=True))
     return schema
 
 
 def get_link_files():
-    base_dir = os.path.abspath('.') + '/docs'
+    """
+    Function to get the list of path of all the file to index
+
+    :return: list of path
+    """
+    base_dir = os.path.abspath('.') + '/' + extracted_dir
     link_files = []
     print os.listdir(base_dir)
     for f in os.listdir(base_dir):
-        link_files.append(base_dir +'/' +f)
-
+        link_files.append(base_dir + f)
     return link_files
 
 
 def optimize_index(dir=index_dir):
-    ix = open_dir(dir)	
+    """
+    Function to optimize the index i.e merges all the different segment of index created during incremental
+    index creation
+    :param dir:
+    """
+    ix = open_dir(dir)
     ix.optimize()
+
 
 def index_my_docs(dirname, clean=False):
     if clean:
@@ -70,12 +78,13 @@ def index_my_docs(dirname, clean=False):
 
 
 def incremental_index(dirname):
+    """
+    Function to add new documents to a previously existed index
+    :param dirname: path of the index directory
+    """
     ix = open_dir(dirname)
     # The set of all paths in the index
     indexed_paths = set()
-    # The set of all paths we need to re-index
-    #to_index = set()
-
     with ix.searcher() as searcher:
         writer = ix.writer()
 
@@ -87,13 +96,17 @@ def incremental_index(dirname):
         # Loop over the files in the filesystem
         for path in get_link_files():
             if path not in indexed_paths:
-                print 'File addng to index: ',path
+                print 'File addng to index: ', path
                 add_doc(writer, path)
         print 'Committing :::'
         writer.commit()
 
+
 def clean_index(dirname):
-    # Always create the index from scratch
+    """
+    Function to create index from scratch
+    :param dirname: path of the index_dir
+    """
     ix = create_in(dirname, schema=create_schema())
     writer = ix.writer()
     link_files = get_link_files()
@@ -104,17 +117,22 @@ def clean_index(dirname):
 
 
 def add_doc(writer, path):
-    temp_url = 'http://www.blahblah.co.in/'
+    """
+    Function to add documents to the index
+    :param writer: the index writer
+    :param path: path of the file to add to index
+    """
     print 'Opening ', path
     try:
         f_link = open(path, 'rb')
-        stories_file = f_link.read()
+        stories_file = pickle.load(f_link)
         f_link.close()
     except IOError:
         print 'Unable to read %s file' % path
     else:
-    	try:
-            writer.add_document(path=unicode(path), content=unicode(stories_file), link=unicode(temp_url),date=unicode('10-10-2015'))
+        try:
+            writer.add_document(path=unicode(path), content=unicode(stories_file['content']), link=unicode('url'),
+                                title=unicode(stories_file['title']))
         except Exception, e:
             print e
 

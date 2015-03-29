@@ -1,17 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Nov  8 09:17:34 2013
-
-@author: topic
-"""
 index_dir = 'stories_index'
 
-import os
+
 from whoosh.index import open_dir
 from whoosh.qparser import QueryParser
-from whoosh import sorting
-import pickle
-import json
 
 
 def main():
@@ -24,7 +15,8 @@ def main():
             print("Did you mean:", corrected.string)
 
         results = searcher.search(query, limit=None)
-        print results[0]
+        for res in results:
+            print 'title : ',  res['title']
 
 def escape_aps(text):
     return text.replace("'", "&#39;")
