@@ -131,7 +131,7 @@ def add_doc(writer, path):
         print 'Unable to read %s file' % path
     else:
         try:
-            writer.add_document(path=unicode(path), content=unicode(stories_file['content']), link=unicode('url'),
+            writer.add_document(path=unicode(path), content=unicode(stories_file['content']), link=unicode(stories_file['url']),
                                 title=unicode(stories_file['title']))
         except Exception, e:
             print e
