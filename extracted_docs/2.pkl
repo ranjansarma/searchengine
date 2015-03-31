@@ -1,0 +1,14 @@
+(dp0
+S'content'
+p1
+S' BEIJING Dec 16 (Reuters) - The Beijing city government announced on Friday users of popular Chinese microblogging sites like Sina\'s Weibo must register with their real personal information and have three months to comply. Users "cannot register with fake identification information", say the rules, which were carried by state media. Companies using microblogs must also register with their proper information. Users have three months to register with "responsible departments for Internet content" or will face legal consequences, the rules said. However, people will be able to choose their own user names, Xinhua news agency cited an unidentified government official as saying. Microblogs allow users to issue short messages of opinion -- a maximum of 140 Chinese characters -- that can course through chains of followers who instantly receive messages. Censors have a hard time monitoring the tens of millions of messages sent every day. Sina has come under increasing scrutiny, with government officials pressuring the company to police Weibo better. Weibo has become a powerful medium for spreading news and opinions and venting frustration against government policies.  The ruling Communist Party has vowed to intensify control over online social media and instant messaging tools, but analysts say it is unlikely to shut down what has become an important valve for monitoring and easing social pressures.'
+p2
+sS'url'
+p3
+S'http://www.reuters.com/article/2011/12/16/china-microblogs-idUSL3E7NG0OP20111216'
+p4
+sS'title'
+p5
+S'Beijing city demands real name registration for microblogs'
+p6
+s.

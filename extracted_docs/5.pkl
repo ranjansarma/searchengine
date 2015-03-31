@@ -1,0 +1,14 @@
+(dp0
+S'content'
+p1
+S' MIAMI (Reuters) - Miami\'s Dwyane Wade scored 40 points to help the Heat beat the New York Knicks 106-98 on Tuesday and record their 15th win in 16 games. LeBron James and the Heat burst out of the blocks to gain a 34-18 advantage after the first quarter thanks to some spectacular basketball. But it was one of Miami\'s less acclaimed players, Lithuanian center Zydrunas Ilgauskas, who was the key man in that early dominance, scoring 12 points and grabbing nine rebounds in the first quarter. "I told Big Z he would have probably had a 28 point, 17-rebound game if he had a coach that would have put him back in there," said Miami head coach Erik Spoelstra. "He was able to be very effective and was able to play more minutes than we planned." With Wade taking the leading role in the second quarter, finishing the first half with 17 points, the Heat had a comfortable 53-40 advantage at halftime. The Knicks clawed their way back to 61-55 in the third but that merely prompted another spell of Miami dominance led by Wade and Chris Bosh. New York showed their trademark determination again by fighting back and with two minutes remaining it was a three-point game with the Knicks trailing 97-94. Spoelstra said he warned his team about New York grit. "I told the guys that a 22-points lead against the Knicks is like a seven-points lead against some other teams," he told reporters. But once again Miami\'s \'big three\' of James, Wade and Bosh took a grip on the game to ensure the scare did not become a shock. "I think we did our job against a team who don\'t quit. It was a collective effort as a team," said Wade. Miami (24-9) trail the Boston Celtics (24-5) at the top of the Eastern Conference while the Knicks slip to 18-13. (Editing by Peter Rutherford)'
+p2
+sS'url'
+p3
+S'http://www.reuters.com/article/2010/12/29/us-nba-heat-idUSTRE6BS0DI20101229'
+p4
+sS'title'
+p5
+S'Blistering Heat survive late scare to beat Knicks'
+p6
+s.

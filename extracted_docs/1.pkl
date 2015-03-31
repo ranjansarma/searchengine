@@ -1,0 +1,14 @@
+(dp0
+S'content'
+p1
+S' HELSINKI (Reuters) - Finnish gaming firm Rovio, creator of "Angry Birds," the world\'s most popular computer game, is planning an initial public offering on the Hong Kong stock exchange in 2013, Finnish weekly Tekniikka&Talous reported on Friday. Rovio\'s marketing chief Peter Vesterbacka told the paper the aim is to build the company into a media firm which would have a market capitalization similar to that of Walt Disney Co, whose shares are valued at $65.3 billion. "That is the target. There is no reason why we should not be able to build a company of that size," Vesterbacka was quoted as saying, adding Rovio\'s 2011 revenues would be around $100 million, compared with $10 million a year before. In May Rovio Chief Executive Mikael Hed told Reuters the firm was aiming for a stock market listing in New York in 2-3 years time. Unlike most mobile game crazes, Angry Birds, in which players use a slingshot to attack pigs who steal the birds\' eggs, has stayed atop the charts since it was launched for Apple\'s iPhone in 2009. It has reached a record 600 million downloads in two years, compared with rival Electronic Arts\' hit game Tetris which reached 100 million mobile downloads last year. Rovio has unveiled two more Angry Birds games and Vesterbacka told the paper in 2012 the firm would launch 5-6 more games with the same characters. Rovio is also expanding the brand across traditional merchandising to items such as toys and playgrounds, and is taking the birds to the big screen. Vesterbacka told the weekly the first full-motion animated movie featuring the characters was still 2-3 years away as film-making is a long process. Earlier this year, Rovio raised $42 million from venture capital firms including Accel Partners, which previously backed Facebook and Baidu, and Skype founder Niklas Zennstroem\'s venture capital firm Atomico Ventures. Rovio was founded in 2003 after three students including Niklas Hed -- CEO Mikael Hed\'s cousin and now Rovio\'s COO -- won a game-development competition sponsored by Finnish mobile phone maker Nokia Oyj and Hewlett-Packard CO. (Reporting By Tarmo Virki; Editing by Phil Berlowitz)'
+p2
+sS'url'
+p3
+S'http://www.reuters.com/article/2011/12/16/us-angry-birds-idUSTRE7BF0BQ20111216'
+p4
+sS'title'
+p5
+S'Angry Birds maker eyes 2013 Hong Kong IPO: report'
+p6
+s.
