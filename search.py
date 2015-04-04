@@ -11,8 +11,11 @@ def main():
     with ix.searcher() as searcher:
         query = QueryParser("content", ix.schema).parse(unicode(q))
         results = searcher.search(query, limit=None)
-        for res in results:
-            print 'title : ',  res['title']
+        if len(results) != 0: 
+            for res in results:
+                print 'title : ',  res['title']
+        else:
+            print "No Documents Found for the given query %s" % q
 
 
 if __name__ == '__main__':
