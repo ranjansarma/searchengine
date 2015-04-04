@@ -32,7 +32,7 @@ def crawl():
             print 'Opening link %s ...' % link
             html_page = browser.get_html(link)
             if type(html_page) == 'dict':
-                with open('error.txt', 'w') as error_file:
+                with open('error.txt', 'w') as error_file:          # to keep track of failed urls
                     error_file.write(link)
             f = open(document_dir + str(article_id) + '.html', 'w')
             f.write(html_page)
@@ -41,12 +41,16 @@ def crawl():
 
 
 def extract():
+    """
+    Function to extract the desired contents from the html source corresponding to each document 
+    and store them to a dictionary and finally store them to files using pickle
+    """
     temp_dict = dict()
     try:
         os.mkdir(extracted_dir)
     except OSError:
         print extracted_dir + ' already exists'
-    for file in os.listdir(document_dir):
+    for file in os.listdir(document_dir):                   # loop through each document in the html_docs directory
         with open(document_dir + file, 'r') as html_file:
             html = html_file.read()
             extractor = StoryExtractor(html)
