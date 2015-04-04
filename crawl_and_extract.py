@@ -14,7 +14,7 @@ import os
 
 
 def main():
-    # crawl()
+    crawl()
     extract()
 
 
@@ -74,7 +74,7 @@ class Browser:
         self.error_dict = {}  # to be returned by get_html if any thing goes wrong
 
     def get_html(self, link):
-        """ Get html of the link  """
+        """ Get html content of the link passed as argument """
         print 'opening  ' + link
         try:
             res = self.newbrowser.open(link)
@@ -106,6 +106,10 @@ class Browser:
 
 
 class StoryExtractor:
+    """
+    Class for parsing the html document and extract the desired contents from the html source
+    For this tutorial this class is parsing news articles selected for REUTERS' archives and its specific to it.
+    """
     def __init__(self, html):
         """ Takes the html page of story and intializes the soup for it """
         self.soup = bs4.BeautifulSoup(html)
