@@ -10,3 +10,4 @@ indexer.py           : To index the crawl documents
 
 search.py            : To temporary test the index, later it can be implemented as a server.
 
+You can find the tutorials in [CodeChunk.in](http://www.codechunk.in "Your very own programming site")
